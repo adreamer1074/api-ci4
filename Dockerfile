@@ -28,10 +28,10 @@ COPY conf.d/php.ini /etc/php.d/php_my.ini
 
 RUN mkdir -p /run/php-fpm
 
-# アプリ配置 (CodeIgniter4 を /var/api-ci4 にコピー)
+# アプリ配置 (CodeIgniter4 を /api-ci4 にコピー)
 #これはローカルです。本番の場合、変更してください
-WORKDIR /api-ci4
-COPY . /var/api-ci4
+WORKDIR /var/www/html/api-ci4
+# COPY . /var/www/html/api-ci4
 
 EXPOSE 80
 
