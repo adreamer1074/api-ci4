@@ -35,5 +35,7 @@ WORKDIR /var/www/html/api-ci4
 
 EXPOSE 80
 
-# Nginx と php-fpm を起動
-CMD php-fpm -D && nginx -g 'daemon off;'
+CMD ["/sbin/init"]
+
+# Nginx と php-fpm を起動（テスト環境はこれを使う）
+# CMD php-fpm -D && nginx -g 'daemon off;'
